@@ -37,7 +37,7 @@ iterL = filter(getBiggerThan20, lst)
 for item in iterL:
     print(item)
 
-    print("---람다함수정의---")
+print("---람다함수정의---")
 iterL = filter(lambda x:x>20, lst)
 for item in iterL:
     print(item)
