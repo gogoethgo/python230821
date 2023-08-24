@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 
-search_keyword='아이폰14'
+search_keyword='XRP'
 
-url = f'https://search.naver.com/search.naver?where=view&sm=tab_jum&query={search_keyword}'
+url = f'https://www.google.com/search?q={search_keyword}'
 
 response = requests.get(url)
 
