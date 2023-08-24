@@ -2,9 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 from openpyxl import Workbook
 
-search_keyword='XRP'
+search_keyword='파이썬'
 
-url = f'https://www.google.com/search?q={search_keyword}'
+url = f'https://www.google.com/search?q={search_keyword}&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg7MgoIAhAAGLEDGIAEMgoIAxAAGLEDGIAEMg0IBBAAGIMBGLEDGIAEMg0IBRAAGIMBGLEDGIAEMg0IBhAAGIMBGLEDGIAEMg0IBxAAGIMBGLEDGIAEMgoICBAAGLEDGIAEMgcICRAAGIAE0gEJNDgzN2owajE1qAIAsAIA&sourceid=chrome&ie=UTF-8'
 
 response = requests.get(url)
 
@@ -20,7 +20,7 @@ ws = wb.active
 ws.append(["블로그명", "블로그주소", "글 제목", "포스팅 날짜"])
 
 for page in range(1, 101):
-    url = f'https://search.naver.com/search.naver?where=view&sm=tab_jum&query={search_keyword}&start={page * 10 - 9}'
+    url = f'https://www.google.com/search?q={search_keyword}&start={page * 10 - 9}'
 
     posts = soup.find_all('li', {'class':'bx _svp_item'})
     for post in posts:
