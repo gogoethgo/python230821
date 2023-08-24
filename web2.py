@@ -20,6 +20,10 @@ for post in posts:
     print(f"{title}, {price}, {addr}")
     f.write(f"{title}, {price}, {addr}\n")
 
+    # <span class="subject_fixed" data-role="list-title-text" title="맥북프로 m1 13인치 512GB 판매합니다(가격인하)">
+	# 	  맥북프로 m1 13인치 512GB 판매합니다(가격인하)
+	# </span>
+
 f.close()
 
     # <div class="card-desc">
