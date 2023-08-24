@@ -17,4 +17,8 @@ soup = BeautifulSoup(page, "html.parser")
 #특정 속성을 지정할 때 : attrs
 #print(soup.find_all("p" , attrs={"class":"outer-text"}))
 #특정 ID만 지정
-print(soup.find_all(id="first" ))
+#print(soup.find_all(id="first" ))
+
+for tag in soup.find_all("p"):
+    title = tag.text.strip()
+    print(title)
